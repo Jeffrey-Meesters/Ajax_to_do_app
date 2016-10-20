@@ -1,5 +1,3 @@
-// Place all the behaviors and hooks related to the matching controller here.
-// All this logic will automatically be available in application.js.
 function toggleDone() {
   $(this).parent().parent().toggleClass("success");
   updateCounters();
@@ -43,9 +41,9 @@ function submitTodo(event) {
 }
 
 function cleanUpDoneTodos(event) {
-  event.preventDefault();
-  $.when($(".success").remove())
-    .then(updateCounters);
+event.preventDefault();
+$.when($(".success").remove())
+  .then(updateCounters);
 }
 
 $(document).ready(function() {
